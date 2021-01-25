@@ -1,0 +1,38 @@
+.AuthLayout {
+    z-index:102;
+    height:80vh;
+    top:20vh;
+}
+#AlertCellPhone{
+    display: none;
+}
+#AlertDesktop{
+    display: block;
+    text-align: center;
+}
+.TitleMarginBottom {
+    margin-bottom: 1.25rem;
+    text-align: center;
+    flex: 1 1 auto;
+}
+@media (min-width: 300px) and (max-width: 815px) and (orientation: landscape) {
+    form label {
+        display: none;
+    }
+    #AlertCellPhone{
+        display: initial;
+    }
+    #AlertDesktop{
+        display: none;
+    }
+    .Cbody{padding:.55rem}
+    .TitleMarginBottom {
+        margin-bottom: .55rem;
+        text-align: center;
+        flex: 1 1 auto;
+    }
+    .card-body{
+        display: none;
+    }
+
+}

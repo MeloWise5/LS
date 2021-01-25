@@ -1,0 +1,27 @@
+@media (min-width: 306px) {
+    .SlideDrawer {
+        position:absolute;
+        width:100vw;
+        height:90vh;
+        z-index: 100;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        overflow: hidden;
+        
+        transition: opacity .5s ease-in;
+    }
+    .Open{opacity: 1; cursor:grab;}
+    .Close{opacity: 0; display: none}
+}
+@media (min-width: 576px) and (orientation: portrait)  {
+    .SlideDrawer {
+        height:90vh;
+
+
+    }
+}
+@media (min-width: 300px) and (max-width: 815px) and (orientation: landscape) {
+    .SlideDrawer {
+        height:80vh;
+    }
+}

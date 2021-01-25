@@ -1,0 +1,105 @@
+@media (min-width: 306px)  {
+    .LadderContainer {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100vw;
+        height: 90vh;
+        background-color: rgba(0, 0, 0, 1);
+        padding: 10px 10px 5px 10px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        transform:translateY(-100%);
+    }
+    .TriggerPriceMerge{
+        color: white;
+        text-align: center;
+        width: 100%;
+        float: left;
+        clear: right;
+        border: 1px solid;
+        font-weight: bold;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 3px auto;
+        border-radius: .25rem;
+    }
+    .TriggerPriceMerge:hover{
+        background-color: white;
+        color:black;
+    }
+    .None {
+        color: white;
+    }
+    .buy {
+        color: limegreen;
+    }
+    .sell {
+        color: red;
+    }
+    .None:hover{
+        background-color: white;
+        color:black;
+    }
+    .buy:hover{
+        background-color: limegreen;
+        color:white;
+        cursor: pointer;
+    }
+    .sell:hover{
+        background-color: red;
+        color:white;
+        cursor: pointer;
+    }
+    .SlideDrawer {
+        transition: transform 1s ease-in-out,opacity 1s ease-in-out;
+    }
+    .Open{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .Close{
+        opacity: 0;
+        transform:translateY(-100%);
+    }
+}
+@media (min-width: 490px) and (orientation: portrait) {
+    .TriggerPriceMerge{
+        margin: 3px 3px;
+        width: calc(100% / 3.19);
+    }
+
+}
+@media (min-width: 576px) and (orientation: portrait) {
+    .TriggerPriceMerge{
+        width: calc(100% / 4.19);
+    }
+
+}
+@media (min-width: 768px) and (orientation: portrait) {
+    .TriggerPriceMerge{
+        width: calc(100% / 5.23);
+    }
+
+}
+@media (min-width: 300px) and (max-width: 815px) and (orientation: landscape) {
+    .LadderContainer {
+        top: 20vh;
+        height: 80vh;
+    }
+    .TriggerPriceMerge{
+        margin: 3px 3px;
+        width: calc(100% / 4.13);
+    }
+
+}
+/*wide desktops*/
+@media (min-width: 815px) {
+    .TriggerPriceMerge{
+        margin: 3px 3px;
+        width: calc(100% / 8.23);
+    }
+
+}

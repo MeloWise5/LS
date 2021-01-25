@@ -1,0 +1,187 @@
+@font-face {
+    font-family: anton;
+    src: url(../../../Assets/fonts/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: light;
+    src: url(../../../Assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+@media (min-width: 306px) {
+    .SlideDrawer {
+        transition: transform .7s ease-in-out,opacity .5s ease-in-out;
+    }
+    .TopNavigationUL {
+        width: 100%;
+        margin: auto;
+    }
+    .UsernameSideDrawerTitle{
+        font-size: 1rem;
+        line-height:0px;
+        padding:0px;
+        flex:1 1 AUTO;
+        width: 100%;
+    }
+    .Open{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .Close{
+        opacity: 0;
+        transform:translateX(-100%);
+    }
+    #AlertCellPhone{
+        display: none;
+    }
+    #AlertDesktop{
+        display: initial;
+    }
+    aside {
+        font-family: price;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 90vw;
+        max-width:600px;
+        height: 90vh;
+        background-color: #222;
+        padding: 10px 10px 5px 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        z-index: 101;
+    }
+    aside h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    aside ul {
+        padding: 0px;
+        list-style: none;
+    }
+    aside ul li {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    aside .topNavigationContainer {
+        height: auto;
+        padding-bottom: 5px;
+        width: 100%;
+    }
+    
+    .NavigationItem {
+        margin: 10px 0;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+    }
+    .NavigationItem a {
+        color: #ff6600;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+    }
+    .NavigationItem a:hover, .NavigationItem a:active, .NavigationItem a.active {
+        color: #40A4C8;
+    }
+    #portfolioNav {
+        width: 80%;
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    #ladderStockDescription {
+        width: 100%;
+        margin:auto;
+        padding: 20px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 1.2rem;
+        background-color:#EEE;
+        
+    }
+    .subTitle {
+        font-weight: lighter!important;
+        font-family: light;
+    }
+}
+
+@media (min-width: 576px) and (orientation: portrait) {
+    .aside {
+        top: 10vh;
+        height: 90vh;
+    }
+    #ladderStockDescription {
+        width: 80%;
+    }
+    .TopNavigationUL {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+    aside {
+        width: 600px;
+    }
+}
+
+@media screen  and (orientation: landscape){
+    .aside {
+        top: 10vh;
+        width: 600px;
+    }
+}
+
+@media (min-width: 1200px) and (orientation: portrait) {}
+
+@media (min-width: 1400px) and (orientation: portrait) {}
+
+
+
+@media (min-width: 300px) and (max-width: 815px) and (orientation: landscape) {
+    aside {
+        font-family: price;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        width: 100%;
+        height: 80vh;
+    }
+    aside h1, #ladderStockDescription {
+        display: none;
+        visibility: hidden;
+    }
+    #AlertCellPhone{
+        display: initial;
+    }
+    #AlertDesktop{
+        display: none;
+    }
+    .TopNavigationUL {
+        width: 80%;
+    }
+
+}
+@media (min-width: 815px) and (max-width: 2200px) and (orientation: landscape) {
+    aside {
+        font-family: price;
+        position: absolute;
+
+        left: 0;
+        
+        height: 90vh;
+    }
+    aside h1, #ladderStockDescription {
+        display: block;
+        visibility: visible;
+        
+    }
+    #ladderStockDescription {
+        width: 80%;
+    }
+    .TopNavigationUL {
+        width: 80%;
+        margin: auto;
+    }
+    
+
+}

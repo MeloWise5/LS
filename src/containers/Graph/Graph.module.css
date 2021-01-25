@@ -1,0 +1,60 @@
+@media (min-width: 306px) {
+    .graphBG {
+        position: absolute;
+        display: flex!important;
+        top: 10vh;
+        background-color: rgba(24, 187, 3, 0.8);
+        width: 100vw;
+        height: 90vh;
+        transform:translateY(-100%);
+        padding:10px;
+    }
+    .graphContainer {
+        align-self: center!important;
+        width: 100%;
+        height: 100%;
+        box-sizing:border-box;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: .25rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding:10px;
+        
+    }
+    .SlideDrawer {
+        transition: transform 1s ease-in-out,opacity 1s ease-in-out;
+    }
+    .Open{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .Close{
+        opacity: 0;
+        transform:translateY(-100%);
+    }
+}
+
+
+
+@media (min-width: 576px)and (orientation: portrait) {
+
+}
+
+
+@media (min-width: 300px) and (max-width: 815px) and (orientation: landscape) {
+    .graphBG {
+        top: 20vh;
+        height: 80vh;
+    }
+
+    .formStyle {
+        height: 19vh;
+    }
+}
+
+@media (min-width: 815px) and (max-width: 2200px) and (orientation: landscape) {
+    .graphBG {
+        padding:20px;
+    }
+}

@@ -1,0 +1,32 @@
+@media (min-width: 306px) {
+    .stockPortfolio {
+        font-size: .6rem;
+        box-sizing: border-box;
+    }
+    .stockPortfolio ul {
+        margin: auto;
+    }
+    .stockPortfolio h1 {
+        color: gold;
+    }
+}
+
+@media (min-width: 576px) {
+    .stockPortfolio {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) {
+    aside {
+        width: 600px;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
