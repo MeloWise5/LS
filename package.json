@@ -1,5 +1,6 @@
 {
   "name": "ladder-stock",
+  "homepage": "http://melowise.com/ladderstock/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

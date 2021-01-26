@@ -18,7 +18,7 @@ configurePriceStore();
 // is for production.
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename='/'>
+    <BrowserRouter basename='/ladderstock'>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
