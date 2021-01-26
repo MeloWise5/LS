@@ -75,9 +75,14 @@ const SideDrawer = props => {
             </Aux>
         )
         logOutBottom = (<div id={classes.AlertDesktop} className="w-100 text-center  mt-2">
+            <NavLink
+                        exact
+                        to='/logout'
+                        activeClassName={classes.NavigationItem}
+                    >
             <Button variant="link" className="w-100 ml-0 p-3 justify-content-center">
                 Log Out
-            </Button>
+            </Button></NavLink>
         </div>)
     }
     return (
