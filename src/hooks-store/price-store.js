@@ -16,12 +16,12 @@ const ConfigurePriceStore = () => {
     // currentState.price is declared below in the init function
     const actions = {
         ADD_PRICE: (currentState, priceObj) => {
-            
+
             const prodIndex = currentState.prices.findIndex(p => p.id === priceObj[0].id);
             //console.log('++++++++')
             //console.log(prodIndex)
             //console.log('++++++++')
-            if(prodIndex>=0){
+            if (prodIndex >= 0) {
                 const newMethodStatus = priceObj[0].method;
                 const updatedPrice = [...currentState.prices];
                 updatedPrice[prodIndex] = {
@@ -29,8 +29,8 @@ const ConfigurePriceStore = () => {
                     method: newMethodStatus
                 };
                 return { prices: updatedPrice };
-            }else{
-                const newPrice = [{id:priceObj[0].id,price:priceObj[0].price,method:priceObj[0].method,show:priceObj[0].show}];
+            } else {
+                const newPrice = [{ id: priceObj[0].id, price: priceObj[0].price, method: priceObj[0].method, show: priceObj[0].show }];
                 const updatedPrice = [...currentState.prices, ...newPrice];
                 return { prices: updatedPrice };
             }
@@ -42,13 +42,18 @@ const ConfigurePriceStore = () => {
     // here is where grab the TriggerPriceArray the python script makes
     // 
 
-    const newState = ({
-        id: '0000',
-        price: 0.0,
-        method: '',
-        show: false
-    })
-    initStore(actions, {prices:[newState]})
+    // becuase of sorting this with these IDS startign with 0.
+    // the map does not recoginize it till the end.
+    initStore(actions, { prices: [{ id: '000', price: '0.00', method: '', show: false },
+    { id: '010', price: '0.10', method: '', show: false },
+    { id: '020', price: '0.20', method: '', show: false },
+    { id: '030', price: '0.30', method: '', show: false },
+    { id: '040', price: '0.40', method: '', show: false },
+    { id: '050', price: '0.50', method: '', show: false },
+    { id: '060', price: '0.60', method: '', show: false },
+    { id: '070', price: '0.70', method: '', show: false },
+    { id: '080', price: '0.80', method: '', show: false },
+    { id: '090', price: '0.90', method: '', show: false }]})
 };
 
 export default ConfigurePriceStore;

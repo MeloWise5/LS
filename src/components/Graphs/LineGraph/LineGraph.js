@@ -64,9 +64,10 @@ const LineGraph = React.memo(props => {
         orderRef.on('value', (snapshot) => {
             let itemCollection = snapshot.val()
             let newOrderState = []
+            let sells = 0;
             for (let items in itemCollection) {
                 //console.log('All the price '+JSON.stringify(itemCollection))
-                console.log('price Data '+JSON.stringify(itemCollection[items].date))
+                //console.log('price Data '+JSON.stringify(itemCollection[items].date))
                 //console.log('price '+items)
                 newOrderState = [{
                     id: items,
@@ -75,7 +76,11 @@ const LineGraph = React.memo(props => {
                     date: itemCollection[items].date
                 }]
                 dispatch('ADD_ORDERS', newOrderState)
+                if(itemCollection[items].method==='sell'){
+                    sells = sells + .10
+                }
             }
+            dispatch('UPDATE_INTEREST', sells)
         });
     }, [])
     // pulls from thet state
@@ -84,11 +89,13 @@ const LineGraph = React.memo(props => {
         //console.log(sell)
         //data.labels.push(sell.date);
         data.datasets[1].data.push(sell.price);
+        return true
     });
     const buys = orders.filter(p => p.method ==='buy' );
     buys.map(buy => {
         data.labels.push(buy.date);
         data.datasets[0].data.push(buy.price);
+        return true
     });
     
 

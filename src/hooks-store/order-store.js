@@ -19,7 +19,7 @@ const ConfigureOrdersStore = () => {
             
             const prodIndex = currentState.orders.findIndex(p => p.id === orderObj[0].id);
             //console.log('++++++++')
-            console.log(prodIndex)
+            //console.log(prodIndex)
             //console.log('++++++++')
             if(prodIndex>=0){
                 const newMethodStatus = orderObj[0].method;
@@ -42,8 +42,8 @@ const ConfigureOrdersStore = () => {
     // here is where grab the TriggerPriceArray the python script makes
     // 
     const newState = ({
-        id: '0000',
-        price: 0.0,
+        id: '000',
+        price: 0.00,
         method: '',
         date: ''
     })

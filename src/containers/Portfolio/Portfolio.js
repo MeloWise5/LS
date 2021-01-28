@@ -1,11 +1,13 @@
 import React from 'react';
+import { useStore } from '../../hooks-store/store'
 import PortfolioItems from '../../components/Portfolio/Portfolio';
 import classes from './Portfolio.module.css';
-import { useStore } from '../../hooks-store/store';
 
 const Portfolio = props => {
     const state = useStore()[0].portfolio
     //console.log(state)
+
+
     return (
         <section className={classes.stockPortfolio} >
             <header>

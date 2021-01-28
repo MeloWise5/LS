@@ -10,6 +10,7 @@ import classes from './SideDrawer.module.css';
 
 
 const SideDrawer = props => {
+    // logout user when the close the page
     const { currentUser } = useAuth()
     // this is the slide animation for the side drawer
     let attachedClasses = [classes.SlideDrawer, classes.Close];

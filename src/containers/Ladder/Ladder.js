@@ -20,18 +20,24 @@ const Ladder = props => {
         priceRef.on('value', (snapshot) => {
             let itemCollection = snapshot.val()
             let newState = []
+            let sells = 0;
             for (let items in itemCollection) {
                 //console.log('All the price '+JSON.stringify(itemCollection))
                 //console.log('price Data '+JSON.stringify(itemCollection[items]))
-                //console.log('price '+items)
+                //console.log(items)
                 newState = [{
                     id: items,
                     price: itemCollection[items].price,
                     method: itemCollection[items].method,
                     show: false
                 }]
+                //console.log(newState)
                 dispatch('ADD_PRICE', newState)
+                if(itemCollection[items].method==='sell'){
+                    sells = sells + (itemCollection[items].price*1)
+                }
             }
+            dispatch('UPDATE_INVESTED', sells)
         });
     }, [])
 
@@ -42,6 +48,7 @@ const Ladder = props => {
     if (showBackdrop) {
         attachedClasses = [classes.SlideDrawer, classes.LadderContainer, classes.Open];
     }
+    //console.log(pricesState)
     return (
         <section id="main" className={attachedClasses.join(' ')}>
             {pricesState.map(price => (

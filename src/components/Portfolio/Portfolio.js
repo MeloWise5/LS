@@ -1,7 +1,10 @@
 import React from 'react';
 import classes from './Portfolio.module.css';
+import 'firebase/database'
 
-const portfolio = props => {
+const Portfolio = props => {
+    
+    
     return (
         <li className={classes[props.main]}>
             <div className={classes.icon}>
@@ -14,4 +17,4 @@ const portfolio = props => {
     );
 };
 
-export default portfolio;
+export default Portfolio;
