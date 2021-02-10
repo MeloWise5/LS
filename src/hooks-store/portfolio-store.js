@@ -15,11 +15,16 @@ const ConfigurePortfolioStore = () => {
     // productID === PAYLOAD
     // currentState.price is declared below in the init function
     const actions = {
-        UPDATE_PRICE: (currentState, typeID) => {
+        UPDATE_PRICE: (currentState) => {
             const updatedProducts = [...currentState.portfolio];
             return { portfolio: updatedProducts };
             //typeID is Capital Invested Profit
             // i would like each to be able to be clicked and sent here were we only update that data.
+        },
+        UPDATE_MARKET_PRICE: (currentState, price) => {
+            const updatedPrice = [...currentState.portfolio];
+            updatedPrice[0].marketprice = price.toFixed(2)
+            return { portfolio: updatedPrice };
         },
         UPDATE_INTEREST: (currentState, price) => {
             //console.log(price)
@@ -54,7 +59,8 @@ const ConfigurePortfolioStore = () => {
         portfolio: [{
             capital: '1300.00',
             invested: '0000.00',
-            interest: '0000.00'
+            interest: '0000.00',
+            marketprice:'8008.55'
         }]
     })
 };

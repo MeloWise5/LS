@@ -55,9 +55,9 @@ const SignUp = () => {
                             </Form.Group>
                             <div className="d-flex">
                             <Link id={classes.AlertCellPhone} to="/login" className="flex-fill text-center pr-3" >
-                                <Button variant="dark" disabled={loading} type="btn" className="w-100 flex-stretch" >Log In</Button>
+                                <Button variant="dark" disabled={loading} type="button" className={classes.priceFontPageLandscape} >Log In</Button>
                             </Link>
-                            <Button disabled={loading} type="submit" className="flex-fill">Sign Up</Button>
+                            <Button disabled={loading} type="submit" className={classes.priceFontPage}>Sign Up</Button>
                             
                             </div>
                         </Form>

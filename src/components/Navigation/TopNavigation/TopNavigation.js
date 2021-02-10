@@ -11,11 +11,11 @@ const topnavigation = (props) => (
                     id="ladderIcon" >
                         <i className="bi bi-ladder App-logo"  ></i>
                 </div>
-                <input type='text' placeholder="Symbol" aria-label="Symbol" aria-describedby="basic-addon1" />
+                
             </div>
         </nav>
     </header>
 );
 
-
+//<input type='text' placeholder="Symbol" aria-label="Symbol" aria-describedby="basic-addon1" />
 export default topnavigation;

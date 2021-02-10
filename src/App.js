@@ -31,15 +31,15 @@ const App = props => {
   );
 
   return (
-    <React.Fragment>
+    <>
       <AuthProvider>
-      <Layout>
-        <Suspense fallback={<Spinner />}>
-          {routes}
-        </Suspense>
-      </Layout>
+        <Layout>
+          <Suspense fallback={<Spinner />}>
+            {routes}
+          </Suspense>
+        </Layout>
       </AuthProvider>
-    </React.Fragment>
+    </>
   );
 }
 

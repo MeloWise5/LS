@@ -16,6 +16,7 @@ const Login = () => {
 
     async function handleSubmit(e) {
         e.preventDefault()
+        e.stopPropagation()
         //Error handeling before we send to the server. Saves time and money.
 
 
@@ -49,15 +50,15 @@ const Login = () => {
                             </Form.Group>
                             <div className="d-flex">
                                 <Link id={classes.AlertCellPhone} to="/signup" className="flex-fill text-center pr-3" >
-                                    <Button variant="dark" disabled={loading} type="btn" className="w-100 flex-stretch" >Sign Up</Button>
+                                    <Button variant="dark" disabled={loading} type="button" className={classes.priceFontPageLandscape} >Sign Up</Button>
                                 </Link>
-                                <Button disabled={loading} type="submit" className="flex-fill">Log In</Button>
+                                <Button disabled={loading} type="submit" className={classes.priceFontPage}>Log In</Button>
                             </div>
                         </Form>
                         <div className="w-100 text-center mt-3">  <Link to="/forgot-password" >Forgot Password?</Link></div>
                     </Card.Body>
                 </Card>
-                <div id={classes.AlertDesktop} className="w-100 text-center mt-2"> Need an account? <Link to="/signup" >Sign Up</Link></div>
+                <div id={classes.AlertDesktop} className="w-100 text-center mt-2"> Need an account? <Link type="button" to="/signup" >Sign Up</Link></div>
             </AuthLayout>
         </>
     )

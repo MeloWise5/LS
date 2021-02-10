@@ -3,8 +3,6 @@ import classes from './Portfolio.module.css';
 import 'firebase/database'
 
 const Portfolio = props => {
-    
-    
     return (
         <li className={classes[props.main]}>
             <div className={classes.icon}>

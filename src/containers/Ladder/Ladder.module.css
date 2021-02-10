@@ -13,6 +13,7 @@
         transform:translateY(-100%);
     }
     .TriggerPriceMerge{
+        position: relative;
         color: white;
         text-align: center;
         width: 100%;

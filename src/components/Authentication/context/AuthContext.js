@@ -50,7 +50,7 @@ export const AuthProvider = props => {
     },[])
     
 
-    // here are the list of props allt he children can use
+    // here are the list of props all the children can use
     const value = {
         currentUser,
         logout,

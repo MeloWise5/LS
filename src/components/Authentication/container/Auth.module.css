@@ -10,8 +10,20 @@
     display: block;
     text-align: center;
 }
+.priceFontPageLandscape{
+    align-items:stretch;
+    width:100%;
+    font-family: price, 'Arial';
+}
+.priceFontPage{
+    font-family: price, 'Arial';
+    text-align:center;
+    flex: 1 1 auto;
+}
 .TitleMarginBottom {
+    font-family: price, verdana;
     margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
     text-align: center;
     flex: 1 1 auto;
 }
@@ -26,6 +38,7 @@
         display: none;
     }
     .Cbody{padding:.55rem}
+    
     .TitleMarginBottom {
         margin-bottom: .55rem;
         text-align: center;

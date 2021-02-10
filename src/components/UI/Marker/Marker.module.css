@@ -1,0 +1,22 @@
+.Loader {
+    display: block;
+    cursor:crosshair;
+    position: absolute;
+    background: yellow;
+    border-radius: 50%;
+    height: 50px;
+    color: black;
+    width: auto;
+    padding: 15px;
+    margin-top: -40px;
+    margin-left: calc(-50%/2);
+    left: 0;
+    font-weight: bold;
+    font-family: price, Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 2s;
+    z-index: 13;
+}
+.Loader:hover {
+    height:100px;
+    padding: 40px;
+}
